@@ -17,40 +17,62 @@ public class principal {
 			System.out.println("3 : Consulter une voiture voitures");
 			System.out.println("4 : Lister les voitures");
 			
+			/*System.out.println("Créer une nouvelle voiture");
+			System.out.println("Créer une nouvelle voiture");
+			System.out.println("Créer une nouvelle voiture");*/
+			choix = 0;
 			choix = sc.nextInt();
 			
 			switch(choix)
 			{
 			case 1:
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				System.out.println("Création d'une voiture !");
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				creationVoiture();
 				break;
 			case 2:
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				System.out.println("Modification d'une voiture !");
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				modificationVoiture();
 				break;
 			case 3:
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				System.out.println("Consultation voiture");
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				consultationVoiture();
 				break;
 			case 4:
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				System.out.println("Liste des voitures présentent dans le garage :");
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				listerVoiture();
 				break;
 			default:
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 				System.out.println("Commande inconnu !");
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 			}
-		}while(choix < 1 && choix > 4);
-		
-		/*System.out.println("Créer une nouvelle voiture");
-		System.out.println("Créer une nouvelle voiture");
-		System.out.println("Créer une nouvelle voiture");*/
+		}while(choix < 1 || choix > 4);
 		
 	}
 	
 	static void creationVoiture()
 	{
+		String nom;
+		String marque;
+		double prix;
 		
+		System.out.println("Quel est le nom de la voiture :");
+		sc.nextLine();
+		nom = sc.nextLine();
+		System.out.println("Quelle est la marque de la voiture :");
+		marque = sc.nextLine();
+		System.out.println("Quel est le prix de la voiture :");
+		prix = sc.nextDouble();
+		
+		Voiture voiture = new Voiture(nom, marque, prix);
 	}
 	
 	static void modificationVoiture()
