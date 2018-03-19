@@ -14,10 +14,16 @@ public class Voiture {
 		prix = 0;
 	}
 	
-	public Voiture(String pNom, String pMarque, double pPrix) {
+	public Voiture(String pNom, String pMarque, double pPrix) 
+	{
 		System.out.println("Entrer d'une nouvelle voiture au garage !");
 		nom = pNom;
 		marque = pMarque;
 		prix = pPrix;
+	}
+	
+	public void definieToi()
+	{
+		System.out.println("Le nom de la voiture est :" + nom);
 	}
 }
